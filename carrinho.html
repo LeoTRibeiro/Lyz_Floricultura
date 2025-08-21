@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Lyz Botânica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Lyz Botânica</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="quem-somos.html">Quem Somos</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-cart">
+                        <input type="text" placeholder="Buscar...">
+                        <a href="carrinho.html" class="cart-icon active">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">3</span>
+                        </a>
+                    </div>
+                    <div class="auth-buttons">
+                        <a href="cadastro.html" class="btn-primary">Cadastrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="container">
+        <h1 class="page-title">Carrinho de Compras</h1>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="container">
+        <div class="cart-content">
+            <div class="cart-items">
+                <div class="cart-header">
+                    <h2>Seus Produtos (3)</h2>
+                    <a href="produtos.html" class="continue-shopping">
+                        <i class="fas fa-arrow-left"></i> Continuar Comprando
+                    </a>
+                </div>
+                
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Orquídea">
+                    </div>
+                    <div class="item-details">
+                        <h3>Orquídea Phalaenopsis</h3>
+                        <p>Linda orquídea branca, perfeita para decorar ambientes internos.</p>
+                        <div class="item-sku">
+                            <span>Código: ORQ001</span>
+                        </div>
+                    </div>
+                    <div class="item-price">
+                        <span class="current-price">R$ 89,90</span>
+                        <span class="old-price">R$ 99,90</span>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn" onclick="updateQuantity('product1', -1)">-</button>
+                        <input type="number" id="product1" value="1" min="1" onchange="updateSubtotal('product1')">
+                        <button class="quantity-btn" onclick="updateQuantity('product1', 1)">+</button>
+                    </div>
+                    <div class="item-subtotal">
+                        <span>R$ 89,90</span>
+                    </div>
+                    <div class="item-remove">
+                        <button class="remove-btn" onclick="removeItem(this)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1598887141417-31c7edf7b500?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Vaso">
+                    </div>
+                    <div class="item-details">
+                        <h3>Vaso Cerâmica Premium</h3>
+                        <p>Vaso de cerâmica artesanal com design moderno.</p>
+                        <div class="item-sku">
+                            <span>Código: VAS023</span>
+                        </div>
+                    </div>
+                    <div class="item-price">
+                        <span class="current-price">R$ 65,00</span>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn" onclick="updateQuantity('product2', -1)">-</button>
+                        <input type="number" id="product2" value="2" min="1" onchange="updateSubtotal('product2')">
+                        <button class="quantity-btn" onclick="updateQuantity('product2', 1)">+</button>
+                    </div>
+                    <div class="item-subtotal">
+                        <span>R$ 130,00</span>
+                    </div>
+                    <div class="item-remove">
+                        <button class="remove-btn" onclick="removeItem(this)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1598880791215-1e5d4faceab5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Suculenta">
+                    </div>
+                    <div class="item-details">
+                        <h3>Kit Suculentas</h3>
+                        <p>Kit com 5 suculentas diferentes para sua coleção.</p>
+                        <div class="item-sku">
+                            <span>Código: SUC045</span>
+                        </div>
+                    </div>
+                    <div class="item-price">
+                        <span class="current-price">R$ 45,00</span>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="quantity-btn" onclick="updateQuantity('product3', -1)">-</button>
+                        <input type="number" id="product3" value="1" min="1" onchange="updateSubtotal('product3')">
+                        <button class="quantity-btn" onclick="updateQuantity('product3', 1)">+</button>
+                    </div>
+                    <div class="item-subtotal">
+                        <span>R$ 45,00</span>
+                    </div>
+                    <div class="item-remove">
+                        <button class="remove-btn" onclick="removeItem(this)">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="cart-promo">
+                    <h3>Tem um cupom de desconto?</h3>
+                    <div class="promo-input">
+                        <input type="text" placeholder="Digite o código do cupom">
+                        <button class="btn">Aplicar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cart-summary">
+                <div class="summary-card">
+                    <h2>Resumo do Pedido</h2>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>R$ 264,90</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Desconto</span>
+                        <span class="discount">-R$ 10,00</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Frete</span>
+                        <span class="shipping">Grátis</span>
+                    </div>
+                    
+                    <div class="summary-divider"></div>
+                    
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>R$ 254,90</span>
+                    </div>
+                    
+                    <div class="summary-row installments">
+                        <span>em até 10x de R$ 25,49 sem juros</span>
+                    </div>
+                    
+                    <button class="btn btn-large btn-full">Finalizar Compra</button>
+                    
+                    <div class="payment-methods">
+                        <p>Métodos de pagamento:</p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-amex"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="security-info">
+                    <div class="security-item">
+                        <i class="fas fa-lock"></i>
+                        <span>Compra 100% segura</span>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-truck"></i>
+                        <span>Entrega garantida</span>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Site protegido</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frequently Bought Together -->
+    <section class="container">
+        <h2 class="section-title">Quem comprou isto, também comprou</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1591955506264-3f5a6834570a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Adubo">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Adubo Orgânico</h3>
+                    <p class="product-price">R$ 25,00</p>
+                    <p class="product-description">Adubo natural para todas as espécies de plantas.</p>
+                    <a href="produto.html" class="btn">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1598885159559-4b35d0a59a2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Regador">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Regador Vintage</h3>
+                    <p class="product-price">R$ 55,00</p>
+                    <p class="product-description">Regador de metal com design retrô e capacidade de 2L.</p>
+                    <a href="produto.html" class="btn">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Samambaia">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Samambaia Americana</h3>
+                    <p class="product-price">R$ 35,00</p>
+                    <p class="product-description">Planta pendente perfeita para varandas e interiores.</p>
+                    <a href="produto.html" class="btn">Adicionar ao Carrinho</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Lyz Botânica</h3>
+                    <p>Sua floricultura de confiança, oferecendo as melhores plantas e flores desde 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <a href="index.html">Início</a>
+                    <a href="quem-somos.html">Quem Somos</a>
+                    <a href="produtos.html">Produtos</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="cadastro.html">Minha Conta</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123 - Jardim</p>
+                    <p><i class="fas fa-phone"></i> (11) 3456-7890</p>
+                    <p><i class="fas fa-envelope"></i> contato@lyzbotanica.com</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Inscreva-se para receber nossas promoções</p>
+                    <input type="email" placeholder="Seu e-mail" class="newsletter-input">
+                    <a href="#" class="btn">Inscrever</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Lyz Botânica - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Funções para o carrinho
+        function updateQuantity(inputId, change) {
+            const input = document.getElementById(inputId);
+            let newValue = parseInt(input.value) + change;
+            
+            if (newValue < 1) newValue = 1;
+            
+            input.value = newValue;
+            updateSubtotal(inputId);
+        }
+        
+        function updateSubtotal(inputId) {
+            // Esta função atualizaria o subtotal do item
+            // Implementação completa requer lógica de preços
+            console.log('Subtotal atualizado para o produto:', inputId);
+        }
+        
+        function removeItem(button) {
+            const item = button.closest('.cart-item');
+            item.style.opacity = '0';
+            
+            setTimeout(() => {
+                item.remove();
+                updateCartCount();
+            }, 300);
+        }
+        
+        function updateCartCount() {
+            // Atualiza o contador do carrinho
+            const count = document.querySelectorAll('.cart-item').length;
+            document.querySelector('.cart-count').textContent = count;
+            
+            if (count === 0) {
+                document.querySelector('.cart-items h2').textContent = 'Seu carrinho está vazio';
+            }
+        }
+    </script>
+</body>
+</html>
