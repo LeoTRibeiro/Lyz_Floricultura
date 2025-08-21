@@ -21,12 +21,17 @@
                         <li><a href="contato.html" class="active">Contato</a></li>
                     </ul>
                 </nav>
-                <div class="search-cart">
-                    <input type="text" placeholder="Buscar...">
-                    <a href="carrinho.html" class="cart-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">3</span>
-                    </a>
+                <div class="header-actions">
+                    <div class="search-cart">
+                        <input type="text" placeholder="Buscar...">
+                        <a href="carrinho.html" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">3</span>
+                        </a>
+                    </div>
+                    <div class="auth-buttons">
+                        <a href="cadastro.html" class="btn-primary">Cadastrar</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -35,6 +40,18 @@
     <!-- Page Title -->
     <section class="container">
         <h1 class="page-title">Entre em Contato</h1>
+        <p class="page-subtitle">Tem dúvidas, sugestões ou precisa de ajuda? Fale conosco!</p>
+    </section>
+
+    <!-- Contact Promo Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2>Cadastre-se e receba <span>atendimento prioritário</span></h2>
+                <p>Clientes cadastrados têm acesso a suporte especializado e respostas mais rápidas</p>
+                <a href="cadastro.html" class="btn">Fazer Cadastro</a>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Content -->
@@ -48,7 +65,7 @@
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <h3>Endereço</h3>
-                        <p>Rua das Flores, 123 - Jardim<br>São Paulo - SP, 01234-567</p>
+                        <p>Avenida Paulista, 1636 - Bela Vistabr>São Paulo - SP, 01310-200</p>
                     </div>
                 </div>
                 
@@ -56,7 +73,7 @@
                     <i class="fas fa-phone"></i>
                     <div>
                         <h3>Telefone</h3>
-                        <p>(11) 3456-7890</p>
+                        <p>(11) 94420-1560</p>
                     </div>
                 </div>
                 
@@ -75,18 +92,29 @@
                         <p>Segunda a Sexta: 8h às 18h<br>Sábado: 9h às 16h<br>Domingo: Fechado</p>
                     </div>
                 </div>
+
+                <div class="contact-benefits">
+                    <h3>Vantagens de ser cadastrado:</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Atendimento prioritário</li>
+                        <li><i class="fas fa-check-circle"></i> Histórico de atendimentos salvo</li>
+                        <li><i class="fas fa-check-circle"></i> Respostas mais rápidas</li>
+                        <li><i class="fas fa-check-circle"></i> Acompanhamento personalizado</li>
+                    </ul>
+                    <a href="cadastro.html" class="btn btn-outline">Cadastrar Agora</a>
+                </div>
             </div>
             
             <div class="contact-form">
                 <h2>Envie uma Mensagem</h2>
                 <form>
                     <div class="form-group">
-                        <label for="name">Nome</label>
+                        <label for="name">Nome *</label>
                         <input type="text" id="name" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="email">E-mail</label>
+                        <label for="email">E-mail *</label>
                         <input type="email" id="email" required>
                     </div>
                     
@@ -94,12 +122,22 @@
                         <label for="phone">Telefone</label>
                         <input type="tel" id="phone">
                     </div>
+
+                    <div class="form-group">
+                        <label for="customer-type">Já é cliente?</label>
+                        <select id="customer-type">
+                            <option value="">Selecione uma opção</option>
+                            <option value="yes">Sim, já sou cadastrado</option>
+                            <option value="no">Não, mas quero me cadastrar</option>
+                            <option value="maybe">Ainda não</option>
+                        </select>
+                    </div>
                     
                     <div class="form-group">
-                        <label for="subject">Assunto</label>
-                        <select id="subject">
+                        <label for="subject">Assunto *</label>
+                        <select id="subject" required>
                             <option value="">Selecione um assunto</option>
-                            <option value="duvida">Dúvida</option>
+                            <option value="duvida">Dúvida sobre produtos</option>
                             <option value="sugestao">Sugestão</option>
                             <option value="reclamacao">Reclamação</option>
                             <option value="elogio">Elogio</option>
@@ -108,12 +146,44 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" rows="5" required></textarea>
+                        <label for="message">Mensagem *</label>
+                        <textarea id="message" rows="5" required placeholder="Descreva sua dúvida, sugestão ou solicitação..."></textarea>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">Desejo receber novidades e promoções por e-mail</label>
                     </div>
                     
-                    <button type="submit" class="btn">Enviar Mensagem</button>
+                    <button type="submit" class="btn btn-full">Enviar Mensagem</button>
+
+                    <div class="form-footer">
+                        <p>Não tem cadastro? <a href="cadastro.html">Clique aqui</a> para criar sua conta e aproveitar benefícios exclusivos!</p>
+                    </div>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>Como faço para comprar?</h3>
+                <p>Você pode navegar por nossos produtos, adicionar itens ao carrinho e finalizar a compra. É rápido e fácil! <a href="cadastro.html">Cadastre-se</a> para uma experiência ainda melhor.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Qual o prazo de entrega?</h3>
+                <p>O prazo varia conforme sua localização. Para a capital de São Paulo, entregamos em até 24h. Para outras regiões, consulte pelo telefone ou e-mail.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Preciso me cadastrar para comprar?</h3>
+                <p>Não, você pode fazer compras como visitante. Porém, ao <a href="cadastro.html">criar uma conta</a>, você ganha descontos exclusivos e pode acompanhar seus pedidos mais facilmente.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Como cuidar das plantas?</h3>
+                <p>Temos um time de especialistas pronto para te ajudar! Entre em contato por qualquer um de nossos canais para receber orientações personalizadas.</p>
             </div>
         </div>
     </section>
@@ -124,6 +194,21 @@
             <h2 class="section-title">Onde Estamos</h2>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658502166!3d-23.565734367639273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1634155100243!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Cadastre-se em nossa newsletter</h2>
+                <p>Receba dicas de cuidados com plantas, novidades e ofertas exclusivas</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                    <button type="submit" class="btn">Cadastrar</button>
+                </form>
+                <small>Ao se inscrever, você concorda com nossa <a href="#">política de privacidade</a>.</small>
             </div>
         </div>
     </section>

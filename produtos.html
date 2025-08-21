@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Lyz Botânica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,12 +21,17 @@
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
                 </nav>
-                <div class="search-cart">
-                    <input type="text" placeholder="Buscar...">
-                    <a href="carrinho.html" class="cart-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">3</span>
-                    </a>
+                <div class="header-actions">
+                    <div class="search-cart">
+                        <input type="text" placeholder="Buscar...">
+                        <a href="carrinho.html" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">3</span>
+                        </a>
+                    </div>
+                    <div class="auth-buttons">
+                        <a href="cadastro.html" class="btn-primary">Cadastrar</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -34,6 +40,18 @@
     <!-- Page Title -->
     <section class="container">
         <h1 class="page-title">Nossos Produtos</h1>
+        <p class="page-subtitle">Descubra nossa seleção de plantas, flores e acessórios para transformar seu espaço</p>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2>Cadastre-se e ganhe <span>15% OFF</span> na primeira compra!</h2>
+                <p>Além disso, receba ofertas exclusivas e dicas de cuidados com plantas</p>
+                <a href="cadastro.html" class="btn">Fazer Cadastro</a>
+            </div>
+        </div>
     </section>
 
     <!-- Filters -->
@@ -72,90 +90,133 @@
         <div class="products-grid">
             <div class="product-card">
                 <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Orquídea">
+                    <img src="lirio_do_vale.jpg" alt="Orquídea">
+                    <span class="product-badge">-10%</span>
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">Orquídea Phalaenopsis</h3>
-                    <p class="product-price">R$ 89,90</p>
-                    <p class="product-description">Linda orquídea branca, perfeita para decorar ambientes internos.</p>
-                    <a href="produto.html" class="btn">Ver Detalhes</a>
+                    <h3 class="product-title">Lírio do Vale</h3>
+                    <div class="product-price">
+                        <span class="current-price">R$ 89,90</span>
+                        <span class="old-price">R$ 99,90</span>
+                    </div>
+                    <p class="product-description">Lindo lírio branco, perfeito para decorar ambientes internos.</p>
+                    <div class="product-actions">
+                        <a href="produto.html" class="btn">Ver Detalhes</a>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Rosa">
+                    <img src="buque_rosas.jpg" alt="Rosa">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Buquê de Rosas Vermelhas</h3>
-                    <p class="product-price">R$ 120,00</p>
+                    <div class="product-price">
+                        <span class="current-price">R$ 120,00</span>
+                    </div>
                     <p class="product-description">Buquê com 24 rosas vermelhas, ideal para presentear.</p>
-                    <a href="produto.html" class="btn">Ver Detalhes</a>
+                    <div class="product-actions">
+                        <a href="produto.html" class="btn">Ver Detalhes</a>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1598887141417-31c7edf7b500?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Vaso">
+                    <img src="vaso_ceramica_premium.jpg" alt="Vaso">
+                    <span class="product-badge">Novo</span>
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Vaso Cerâmica Premium</h3>
-                    <p class="product-price">R$ 65,00</p>
+                    <div class="product-price">
+                        <span class="current-price">R$ 65,00</span>
+                    </div>
                     <p class="product-description">Vaso de cerâmica artesanal com design moderno.</p>
-                    <a href="produto.html" class="btn">Ver Detalhes</a>
+                    <div class="product-actions">
+                        <a href="produto.html" class="btn">Ver Detalhes</a>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1598880791215-1e5d4faceab5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Suculenta">
+                    <img src="suculentas.jpg" alt="Suculenta">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Kit Suculentas</h3>
-                    <p class="product-price">R$ 45,00</p>
+                    <div class="product-price">
+                        <span class="current-price">R$ 45,00</span>
+                    </div>
                     <p class="product-description">Kit com 5 suculentas diferentes para sua coleção.</p>
-                    <a href="produto.html" class="btn">Ver Detalhes</a>
+                    <div class="product-actions">
+                        <a href="produto.html" class="btn">Ver Detalhes</a>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Samambaia">
+                    <img src="samambaia.jpg" alt="Samambaia">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Samambaia Americana</h3>
-                    <p class="product-price">R$ 35,00</p>
+                    <div class="product-price">
+                        <span class="current-price">R$ 35,00</span>
+                    </div>
                     <p class="product-description">Planta pendente perfeita para varandas e interiores.</p>
-                    <a href="produto.html" class="btn">Ver Detalhes</a>
+                    <div class="product-actions">
+                        <a href="produto.html" class="btn">Ver Detalhes</a>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1591955506264-3f5a6834570a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Tulipas">
+                    <img src="buque_tulipa.jpg" alt="Tulipas">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Buquê de Tulipas</h3>
-                    <p class="product-price">R$ 75,00</p>
+                    <div class="product-price">
+                        <span class="current-price">R$ 75,00</span>
+                    </div>
                     <p class="product-description">Tulipas coloridas importadas da Holanda.</p>
-                    <a href="produto.html" class="btn">Ver Detalhes</a>
+                    <div class="product-actions">
+                        <a href="produto.html" class="btn">Ver Detalhes</a>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1598885159559-4b35d0a59a2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Adubo">
+                    <img src="adubo.jpg" alt="Adubo">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Adubo Orgânico</h3>
-                    <p class="product-price">R$ 25,00</p>
+                    <div class="product-price">
+                        <span class="current-price">R$ 25,00</span>
+                    </div>
                     <p class="product-description">Adubo natural para todas as espécies de plantas.</p>
-                    <a href="produto.html" class="btn">Ver Detalhes</a>
+                    <div class="product-actions">
+                        <a href="produto.html" class="btn">Ver Detalhes</a>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1598885159559-4b35d0a59a2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Regador">
+                    <img src="regador.jpg" alt="Regador">
                 </div>
                 <div class="product-info">
                     <h3 class="product-title">Regador Vintage</h3>
-                    <p class="product-price">R$ 55,00</p>
+                    <div class="product-price">
+                        <span class="current-price">R$ 55,00</span>
+                    </div>
                     <p class="product-description">Regador de metal com design retrô e capacidade de 2L.</p>
-                    <a href="produto.html" class="btn">Ver Detalhes</a>
+                    <div class="product-actions">
+                        <a href="produto.html" class="btn">Ver Detalhes</a>
+                        <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -167,6 +228,38 @@
             <a href="#" class="page-link">3</a>
             <a href="#" class="page-link">4</a>
             <a href="#" class="page-link">></a>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Vantagens de se cadastrar</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-tag"></i>
+                    <h3>Ofertas Exclusivas</h3>
+                    <p>Descontos especiais e promoções apenas para cadastrados</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Lista de Desejos</h3>
+                    <p>Salve seus produtos favoritos para comprar depois</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Compras Rápidas</h3>
+                    <p>Finalize pedidos com apenas alguns cliques</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-box-open"></i>
+                    <h3>Acompanhe Pedidos</h3>
+                    <p>Acompanhe o status de entrega e histórico de compras</p>
+                </div>
+            </div>
+            <div class="benefits-cta">
+                <a href="cadastro.html" class="btn btn-large">Cadastre-se Agora</a>
+            </div>
         </div>
     </section>
 
